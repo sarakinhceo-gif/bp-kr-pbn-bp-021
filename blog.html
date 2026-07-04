@@ -3,286 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 | 서울 홈페이지 빌더 업체의 디지털 인사이트</title>
+    <meta name="description" content="서울 홈페이지 빌더 업체의 눈으로 본 웹 트렌드, 개발자의 일상, 그리고 브랜드를 위한 기술적 이야기. ">
+    <meta name="keywords" content="서울 홈페이지 빌더 업체, 웹 개발 블로그, SEO 팁, UX 디자인, 코딩 이야기, 서울 스타트업">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kr-pbn-bp-021.pages.dev/blog">
+    <meta name="slug" content="kr-pbn-bp-021-blog">
+    <!-- BPAAS Design System Meta Tags -->
     <meta name="bpaas-design-system" content="editorial-apple">
     <meta name="bpaas-design-theme" content="kr-noir-gold">
-    <title>블로그 | 서울 홈페이지 빌더 업체: 디자인 본질 찾기 - KR-NOIR</title>
-    <meta name="description" content="서울 홈페이지 빌더 업체를 선택할 때, 왜 '꾸민' 스타일보다 '있는 그대로'의 스타일이 더 강력할까요? 웹 개발자가 바라보는 브랜드 본질에 대한 솔직한 이야기를 들려드립니다.">
-    <meta name="keywords" content="서울 홈페이지 빌더 업체, 웹제작 서울, 반응형 홈페이지, 브랜드 웹사이트, 크리에이터용 웹빌더, 웹디자인 트렌드, 브랜드 스토리텔링">
-    <link rel="canonical" href="https://kr-pbn-bp-021.pages.dev/blog/design-essence">
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:title" content="블로그 | 서울 홈페이지 빌더 업체의 디지털 인사이트">
+    <meta property="og:description" content="서울 홈페이지 빌더 업체의 눈으로 본 웹 트렌드, 개발자의 일상, 그리고 브랜드를 위한 기술적 이야기. ">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kr-pbn-bp-021.pages.dev/blog/design-essence">
-    <meta property="og:title" content="서울 홈페이지 빌더 업체: 디자인 본질 찾기">
-    <meta property="og:description" content="화려한 효과보다 중요한 건 콘텐츠의 흐름입니다. 서울 홈페이지 빌더 업체가 전하는 디자인의 본질.">
-    <meta property="og:image" content="https://kr-pbn-bp-021.pages.dev/assets/img/blog-cover-design.jpg">
+    <meta property="og:url" content="https://kr-pbn-bp-021.pages.dev/blog">
+    <meta property="og:site_name" content="KR-PBN-BP-021">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="블로그 | 서울 홈페이지 빌더 업체의 디지털 인사이트">
+    <meta name="twitter:description" content="서울 홈페이지 빌더 업체의 눈으로 본 웹 트렌드, 개발자의 일상, 그리고 브랜드를 위한 기술적 이야기. ">
+
     <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         :root {
-            --c-bg: #080808;
-            --c-surface: #141414;
-            --c-text-main: #F0F0F0;
-            --c-text-sub: #A0A0A0;
-            --c-accent: #D4AF37; /* Gold Noir */
-            --c-accent-dim: #8a701e;
-            --font-main: 'Apple SD Gothic Neo', 'Pretendard', sans-serif;
-            --font-serif: 'Times New Roman', 'Noto Serif', serif;
-            --spacing-unit: 8px;
+            --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-serif: 'Noto Serif KR', 'Times New Roman', serif;
+            --color-bg: #0a0a0a;
+            --color-text: #f0f0f0;
+            --color-text-muted: #888888;
+            --color-accent: #D4AF37; /* Gold */
+            --color-border: #333333;
+            --spacing-unit: 1rem;
             --container-width: 1200px;
         }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
         body {
-            background-color: var(--c-bg);
-            color: var(--c-text-main);
             font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-
-        /* Typography Override for Sans-Serif Elements */
-        h1, h2, h3, h4, h5, h6, .btn, .nav-link, .meta-data {
-            font-family: var(--font-main);
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
             letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--color-accent);
         }
 
-        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
-        a:hover { color: var(--c-accent); }
-
-        /* Layout Utilities */
+        /* LAYOUT UTILITIES */
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 var(--spacing-unit);
         }
-        
-        section { padding: 80px 0; }
-        
-        /* Header & Navigation */
+        section {
+            padding: 4rem 0;
+        }
+        section + section {
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* DROP CAP */
+        .drop-cap::first-letter {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            color: var(--color-accent);
+        }
+
+        /* HEADER & NAV */
         header {
-            position: fixed;
+            padding: 2rem 0;
+            position: sticky;
             top: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(8, 8, 8, 0.9);
+            background-color: rgba(10, 10, 10, 0.9);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
             z-index: 1000;
-            display: flex;
-            align-items: center;
+            border-bottom: 1px solid var(--color-border);
         }
-        
-        .nav-wrapper {
-            width: 100%;
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--c-text-main);
-            letter-spacing: -0.05em;
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-accent);
         }
-        .logo span { color: var(--c-accent); }
-        
-        .nav-links { display: flex; gap: 32px; }
-        .nav-link { font-size: 15px; font-weight: 500; color: var(--c-text-sub); }
-        .nav-link.active { color: var(--c-text-main); }
-        
-        .hamburger { display: none; cursor: pointer; }
-        .hamburger span { display: block; width: 24px; height: 2px; background: var(--c-text-main); margin: 5px 0; }
-
-        /* Blog Specific Styles */
-        .blog-header {
-            margin-top: 120px;
-            margin-bottom: 60px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 40px;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
         }
-        
-        .blog-meta {
-            font-size: 14px;
-            color: var(--c-accent);
+        .nav-links a {
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* BLOG SPECIFIC STYLES */
+        .blog-header {
+            text-align: center;
+            padding: 6rem 0;
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .blog-header p {
+            color: var(--color-text-muted);
+            font-size: 1.2rem;
+        }
+        .article-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .article-card {
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .article-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+        }
+        .article-meta {
+            font-size: 0.8rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
             display: block;
         }
-        
-        .blog-title {
-            font-size: clamp(32px, 5vw, 56px);
-            line-height: 1.1;
-            font-weight: 700;
-            margin-bottom: 24px;
+        .article-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
-        
-        .blog-content {
-            max-width: 740px;
-            margin: 0 auto;
+        .article-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
         }
-        
-        .blog-body p {
-            font-size: 18px;
-            color: var(--c-text-sub);
-            margin-bottom: 32px;
-            line-height: 1.8;
+        .read-more {
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--color-accent);
+            padding-bottom: 2px;
         }
 
-        .blog-body h2 {
-            font-size: 28px;
-            color: var(--c-text-main);
-            margin: 48px 0 24px;
-            border-left: 3px solid var(--c-accent);
-            padding-left: 16px;
-        }
-
-        .blog-body blockquote {
-            border-left: 1px solid var(--c-text-sub);
-            padding-left: 24px;
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-size: 20px;
-            color: var(--c-text-main);
-            margin: 40px 0;
-        }
-
-        .img-placeholder {
-            width: 100%;
-            height: 400px;
-            background: var(--c-surface);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 32px 0;
-            color: var(--c-text-sub);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        /* Newsletter / CTA */
-        .newsletter {
-            background: var(--c-surface);
-            padding: 60px 40px;
-            text-align: center;
-            border-radius: 4px;
-            margin-top: 80px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: var(--c-accent);
-            color: var(--c-bg);
-            font-weight: 600;
-            border-radius: 2px;
-            margin-top: 24px;
-            transition: all 0.3s;
-        }
-        .btn:hover {
-            background: var(--c-accent-dim);
-            color: #fff;
-        }
-
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: block; }
-            .blog-header { margin-top: 100px; }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .blog-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <div class="container nav-wrapper">
-            <a href="/" class="logo">KR-NOIR<span>.</span></a>
+        <div class="container nav-container">
+            <a href="/" class="logo">KR-PBN-BP-021</a>
             <nav class="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/services" class="nav-link">Services</a>
-                <a href="/portfolio" class="nav-link">Portfolio</a>
-                <a href="/blog" class="nav-link active">Insights</a>
-                <a href="/contact" class="nav-link">Contact</a>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/services">서비스</a>
+                <a href="/blog" style="color: var(--color-accent);">블로그</a>
+                <a href="/contact">문의</a>
             </nav>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+            <div class="hamburger">☰</div>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <div class="container">
-            <article class="blog-content">
-                <header class="blog-header">
-                    <span class="blog-meta">Seoul Web Builder Insights</span>
-                    <h1 class="blog-title">서울 홈페이지 빌더 업체, 왜 '디자인'보다 '본질'을 물어볼까요?</h1>
-                    <div class="meta-data" style="color: var(--c-text-sub); font-size: 14px;">
-                        Written by Geek Dev | 2024. 05. 21 | Reading time: 4 mins
-                    </div>
-                </header>
+        <!-- Blog Header -->
+        <section class="blog-header">
+            <div class="container">
+                <div class="article-meta">Editorial Insight</div>
+                <h1>서울 홈페이지 빌더,<br>그리고 개발자의 노트</h1>
+                <p>단순한 코딩을 넘어, 브랜드의 이야기를 기술로 번역하는 과정.</p>
+            </div>
+        </section>
 
-                <div class="blog-body">
-                    <p>안녕하세요, 코드로 그림을 그리는 geek 입니다. 오늘 <strong>서울 홈페이지 빌더 업체</strong>를 찾으시는 여러분과 조금 더 깊고, 어쩌면 약간은 거친(?) 이야기를 나눠보려고 합니다.</p>
+        <!-- Article List -->
+        <section>
+            <div class="container">
+                <div class="article-list">
                     
-                    <p>보통 웹사이트 제작을 의뢰하실 때 가장 먼저 묻는 질문이 뭐였죠? "비슷한 예를 들어주세요", "이런 색상으로 해주세요", "여기저기 움직이는 효과 좀 넣어주세요".</p>
+                    <!-- Article 1 -->
+                    <article class="article-card">
+                        <span class="article-meta">2024. 05. 21 | Tech</span>
+                        <h3>서울 홈페이지 빌더 업체가 말하는 '속도'의 비밀</h3>
+                        <p class="drop-cap">여러분, 웹사이트 로딩 속도가 1 초 늦어질 때마다 이탈률이 7% 씩 증가한다는 사실, 알고 계셨나요? 저희가 서울에서 홈페이지를 제작할 때 가장 공을 들이는 부분이 바로 이 '0.1 초'의 싸움입니다. 단순히 이미지를 압축하는 걸 넘어서, DOM 구조를 최적화하고 불필요한 자바스크립트를 걷어내는 과정은 마치 보석 다듬기 같죠. 오늘은 저희가 어떻게 Google PageSpeed Insights 점수 95 점 이상을 유지하며, 사용자에게 쾌적한 경험을 제공하는지 그 비하인드 스토리를 풀어보려 합니다.</p>
+                        <a href="#" class="read-more">전체 글 읽기</a>
+                    </article>
 
-                    <p>물론 맞습니다. 예쁜 게 좋죠. 근데 말이죠, 화려한 불꽃놀이 뒤에 남는 게 아무것도 없다면 좀 허무하지 않나요? 저는 오늘, 서울의 수많은 빌더 업체들 사이에서 우리가 왜 '화려함' 대신 '본질'을 추구하는지, 그리고 그게 왜 여러분의 브랜드에 더 도움이 되는지 털어놓으려 합니다.</p>
+                    <!-- Article 2 -->
+                    <article class="article-card">
+                        <span class="article-meta">2024. 05. 15 | Design</span>
+                        <h3>노和黑 골드: 럭셔리 웹 디자인의 심리학</h3>
+                        <p>왜 고급 브랜드는 검은색 배경을 선호할까요? 단순히 '세련돼서'가 아닙니다. 어두운 배경은 콘텐츠 자체에 집중하게 만들고, 금색 (Gold) 포인트는 시각적 위계를 만들어 사용자의 시선을 자연스럽게 유도합니다. 저희가 설계한 'kr-noir-gold' 테마는 이러한 심리학적 접근을 기반으로 합니다. 대비 (Contrast) 를 극대화하여 텍스트의 가독성을 높이는 동시에,여백의 미를 통해 브랜드의 품격을 한 층 높이는 전략, 함께 알아볼까요?</p>
+                        <a href="#" class="read-more">전체 글 읽기</a>
+                    </article>
 
-                    <div class="img-placeholder">
-                        [Image: Minimalist editing interface focusing on typography and whitespace]
-                    </div>
+                    <!-- Article 3 -->
+                    <article class="article-card">
+                        <span class="article-meta">2024. 05. 08 | Story</span>
+                        <h3>개발자로서 서울에서 일한다는 것</h3>
+                        <p>강남의 테헤란로부터 성수동의 힙한 카페까지, 서울의 웹 생태계는 정말 역동적입니다. 저는 오늘 아침에도 지하철에서 모바일 최적화 된 랜딩 페이지를 체크했어요. '서울 홈페이지 빌더'라는 타이틀 뒤에는 수많은 개발자의 밤샘과 커피가 있죠. 하지만 클라이언트의 브랜드가 웹上で 빛을 발할 때의 그 희열은 어떤 것과도 바꿀 수 없습니다. 기술적 완성도와 감성적인 스토리텔링이 만나는 지점, 그곳이 바로 우리가 일하는 현장입니다.</p>
+                        <a href="#" class="read-more">전체 글 읽기</a>
+                    </article>
 
-                    <h2>1. "화려한 건 다 똑같아요"</h2>
-                    <p>솔직히 말해볼게요. 요즘 툴이 너무 좋아졌습니다. 버튼 하나에 마우스 올리면 색이 변하고, 스크롤 내리면 이미지가 우르르 쏟아지는 건, 예전에는 코딩 잘하는 사람만 했던 건데 이제는 클릭 몇 번이면 다 됩니다.</p>
-                    
-                    <p>그런데 이상하지 않으세요? A 브랜드의 사이트나 B 브랜드의 사이트나, 막상 들어가 보면 '아, 이거 어디선가 본 듯한데?' 하는 기분이 듭니다. 템플릿의 함정이죠. <strong>서울 홈페이지 빌더 업체</strong>를 고를 때, 단순히 "무슨 메뉴가 있나"만 보시면 안 됩니다. 그들이 당신의 브랜드 '질문'에 어떻게 대답하는지 봐야 합니다.</p>
-
-                    <blockquote>
-                        "디자인은 어떻게 보이게 하는가가 아니라, 어떻게 작동하게 하는가이다." - 스티브 잡스
-                    </blockquote>
-
-                    <p>우린 작동에 집중합니다. 사용자가 어디를 클릭할 때 가장 편안해하는지, 어떤 문구를 읽을 때 "아, 이거 내 이야기네"라고 고개를 끄덕이는지. 그 미세한 심리를 건드리는 게 진짜 빌더의 일이라고 생각합니다.</p>
-
-                    <h2>2. 코딩 물을 먹어본 개발자의 고집</h2>
-                    <p>저희 팀은 조금 깝니다. (웃음) 빌더 툴을 쓰지만, 그 안에서 가능한 한 '순수한 코드'에 가깝게 만듭니다. 왜냐구요? 나중에 사이트가 무거워져서 로딩이 느려지면, 그 손해는 고스란히 사장님의 몫이기 때문입니다.</p>
-
-                    <p>서울의 웹환경은 정말 빠릅니다. 사용자의 인내심은 3 초도 안 됩니다. 화려한 애니메이션 때문에 3 초를 기다리게 한다면, 그건 디자인 실패입니다. 우리는 불필요한 코드를 과감히 쳐내고, 텍스트의 가독성과 이미지의 선명도, 그리고 모바일에서의 터치감을 최우선으로 둡니다. 이게 바로 <strong>Seoul Web Builder</strong>로서의 자부심이에요.</p>
-
-                    <h2>3. 당신의 스토리를 '편집'합니다</h2>
-                    <p>마지막으로, 우린 단순 제작자가 아니라 '에디터'입니다. 사장님이 주신 자료를 그대로 붙여넣기만 하는 게 아니에요. "이 문장은 좀 줄이는 게 어때요?", "이 사진은 이 순서가 더 설득력 있어 보이는데요?" 라고 제안합니다.</p>
-                    
-                    <p>브랜드의 본질을 드러내는 건, 불필요한 장식을 덜어내고 핵심 메시지만 남기는 작업에서 시작됩니다. 마치 좋은 에디터가 원고를 다듬어 작가를 빛나게 하듯이, 우리는 웹사이트라는 캔버스 위에서 당신의 브랜드를 빛나게 하고 싶습니다.</p>
-
-                    <div class="newsletter">
-                        <h3 style="color: var(--c-text-main); margin-bottom: 16px;">당신의 브랜드 스토리를 시작해볼까요?</h3>
-                        <p style="color: var(--c-text-sub); font-size: 16px; margin-bottom: 24px;">
-                            화려함은 잊으세요. 본질에 집중하는 <strong>서울 홈페이지 빌더 업체</strong> KR-NOIR 와 함께라면 가능합니다.
-                        </p>
-                        <a href="/contact" class="btn">무료 컨설팅 신청하기</a>
-                    </div>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / CTA -->
+        <section style="background-color: #111;">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 1rem; color: var(--color-accent);">인사이트를 놓치지 마세요</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-muted);">매주 화요일, 웹 트렌드와 개발 팁을 이메일로 받아보세요.</p>
+                <form style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <input type="email" placeholder="이메일 주소를 입력하세요" style="padding: 0.8rem; background: #222; border: 1px solid #444; color: #fff; min-width: 250px;">
+                    <button type="submit" style="padding: 0.8rem 2rem; background: var(--color-accent); border: none; color: #000; font-weight: bold; cursor: pointer;">구독하기</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <footer style="background: #000; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 80px;">
-        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-            <div>
-                <h4 style="color: var(--c-text-main); margin-bottom: 16px;">KR-NOIR</h4>
-                <p style="color: var(--c-text-sub); font-size: 14px; max-width: 300px;">
-                    서울특별시 강남구 테헤란로 123<br>
-                    Editor's Choice Web Builder
-                </p>
+    <!-- Footer -->
+    <footer style="padding: 4rem 0; border-top: 1px solid var(--color-border); margin-top: 4rem;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+                <div>
+                    <h4 style="color: var(--color-accent); margin-bottom: 1rem;">KR-PBN-BP-021</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+                        서울특별시 강남구 테헤란로 123<br>
+                        대표: 김개발 | 사업자등록번호: 123-45-67890
+                    </p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none; color: var(--color-text-muted); font-size: 0.9rem; line-height: 2;">
+                        <li><a href="/">홈</a></li>
+                        <li><a href="/about">회사 소개</a></li>
+                        <li><a href="/blog">블로그</a></li>
+                        <li><a href="/contact">문의하기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Contact</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 2;">
+                        Tel: <a href="tel:02-1234-5678" style="color: var(--color-accent);">02-1234-5678</a><br>
+                        Email: hello@kr-pbn-bp-021.com
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 style="color: var(--c-text-main); margin-bottom: 16px;">Contact</h4>
-                <p style="color: var(--c-text-sub); font-size: 14px;">
-                    <a href="tel:02-1234-5678" style="display: block; margin-bottom: 8px;">02-1234-5678</a>
-                    <a href="mailto:hello@kr-noir.com" style="display: block;">hello@kr-noir.com</a>
-                </p>
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #222; text-align: center; color: #555; font-size: 0.8rem;">
+                &copy; 2024 KR-PBN-BP-021. All rights reserved. Designed with passion in Seoul.
             </div>
-        </div>
-        <div class="container" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; text-align: center;">
-            <p style="color: #555; font-size: 12px;">&copy; 2024 KR-NOIR. All rights reserved.</p>
         </div>
     </footer>
 
