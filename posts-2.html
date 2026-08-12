@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · kr-pbn-bp-021</title>
+  <meta name="description" content="kr-pbn-bp-021에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://seoul-web-marketing.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RESET & BASE */
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ :root {
+ --primary: #1a1a1a;
+ --secondary: #fafaf5;
+ --accent: #c5a880;
+ --text-dark: #1a1a1a;
+ --text-light: #fafaf5;
+ --font-serif: 'Playfair Display', 'Times New Roman', serif;
+ --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --max-width: 720px;
+ --section-gap: 120px;
+ }
+
+ body {
+ background-color: var(--secondary);
+ color: var(--text-dark);
+ font-family: var(--font-sans);
+ line-height: 1.8;
+ letter-spacing: -0.01em;
+ overflow-x: hidden;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+ font-family: var(--font-serif);
+ font-weight: 700;
+ color: var(--primary);
+ line-height: 1.2;
+ }
+
+ a {
+ color: inherit;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
+
+ a:hover {
+ color: var(--accent);
+ }
+
+ /* LAYOUT UTILITIES */
+ .container {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 72px;
+ }
+
+ section {
+ padding: 72px 0;
+ }
+
+ section + section {
+ margin-top: var(--section-gap);
+ }
+
+ /* DROP CAP */
+ .drop-cap::first-letter {
+ float: left;
+ font-family: var(--font-serif);
+ font-size: 3.5rem;
+ line-height: 0.8;
+ padding-right: 16px;
+ padding-top: 4px;
+ color: var(--accent);
+ }
+
+ /* HEADER & NAV */
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: rgba(250, 250, 245, 0.95);
+ backdrop-filter: blur(10px);
+ z-index: 1000;
+ border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+ padding: 24px 0;
+ }
+
+ .nav-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .brand {
+ font-family: var(--font-serif);
+ font-size: 1.25rem;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
+ }
+
+ .nav-links {
+ display: flex;
+ gap: 32px;
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ }
+
+ .hamburger {
+ display: none;
+ cursor: pointer;
+ flex-direction: column;
+ gap: 6px;
+ }
+
+ .hamburger span {
+ width: 24px;
+ height: 1px;
+ background-color: var(--primary);
+ transition: 0.3s;
+ }
+
+ /* HERO SECTION */
+ .hero {
+ height: 90vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ position: relative;
+ background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+ color: var(--text-light);
+ margin-top: -80px; /* Offset header */
+ padding-top: 80px;
+ }
+
+ .hero-content {
+ max-width: 640px;
+ padding: 0 24px;
+ z-index: 2;
+ }
+
+ .hero h1 {
+ font-size: 3.5rem;
+ margin-bottom: 24px;
+ color: var(--text-light);
+ }
+
+ .hero-subtitle {
+ font-size: 1.25rem;
+ font-family: var(--font-sans);
+ font-weight: 300;
+ opacity: 0.9;
+ margin-bottom: 48px;
+ color: var(--accent);
+ }
+
+ .cta-button {
+ display: inline-block;
+ padding: 16px 32px;
+ border: 1px solid var(--accent);
+ color: var(--accent);
+ font-family: var(--font-sans);
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.15em;
+ transition: all 0.4s ease;
+ background: transparent;
+ }
+
+ .cta-button:hover {
+ background: var(--accent);
+ color: var(--primary);
+ }
+
+ /* CONTENT TYPOGRAPHY */
+ .content-block p {
+ margin-bottom: 24px;
+ font-size: 1.125rem;
+ color: #444;
+ }
+
+ .divider {
+ width: 60px;
+ height: 1px;
+ background-color: var(--accent);
+ margin: 48px auto;
+ }
+
+ /* UGC REVIEWS */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 48px;
+ margin-top: 48px;
+ }
+
+ .review-card {
+ border-top: 1px solid rgba(26, 26, 26, 0.1);
+ padding-top: 24px;
+ }
+
+ .stars {
+ color: var(--accent);
+ letter-spacing: 2px;
+ margin-bottom: 16px;
+ font-size: 1.2rem;
+ }
+
+ .review-text {
+ font-family: var(--font-serif);
+ font-style: italic;
+ font-size: 1.1rem;
+ margin-bottom: 24px;
+ line-height: 1.6;
+ }
+
+ .review-meta {
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: #888;
+ }
+
+ /* FOOTER */
+ footer {
+ background-color: var(--primary);
+ color: var(--secondary);
+ padding: 72px 0;
+ margin-top: 120px;
+ text-align: center;
+ }
+
+ .footer-content {
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+ align-items: center;
+ }
+
+ .footer-link {
+ color: var(--secondary);
+ border-bottom: 1px solid transparent;
+ }
+
+ .footer-link:hover {
+ border-bottom: 1px solid var(--accent);
+ color: var(--accent);
+ }
+
+ .copyright {
+ font-size: 0.8rem;
+ opacity: 0.5;
+ margin-top: 48px;
+ }
+
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ :root {
+ --section-gap: 80px;
+ }
+
+ .container {
+ padding: 0 24px;
+ }
+
+ .hero h1 {
+ font-size: 2.5rem;
+ }
+
+ .nav-links {
+ display: none;
+ position: absolute;
+ top: 70px;
+ left: 0;
+ width: 100%;
+ background: var(--secondary);
+ flex-direction: column;
+ padding: 24px;
+ text-align: center;
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ }
+
+ .nav-links.active {
+ display: flex;
+ }
+
+ .hamburger {
+ display: flex;
+ }
+
+ .drop-cap::first-letter {
+ font-size: 2.5rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · kr-pbn-bp-021">
+  <meta property="og:description" content="kr-pbn-bp-021에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://seoul-web-marketing.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-container">
+ <div class="brand">Noir & Gold</div>
+ <div class="hamburger" id="mobile-menu-btn">
+ 
+ 
+ 
+ </div>
+ <nav class="nav-links" id="nav-links">
+ <a href="#about">About</a>
+ <a href="#process">Process</a>
+ <a href="#reviews">Stories</a>
+ 
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 31개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0104.html">서울 홈페이지 빌더 업체 찾을 때 필수인 망원 노래방 추천정보 확인</a>
+        <p class="post-item__summary">서울 홈페이지 빌더 업체 선정 시 플랫폼의 안정성을 검토하듯이, 노래방을 선택할 때는 접근성과 위치 파악이 선행되어야 합니다. 망원 지역은 지리적 특색이 뚜렷하여 대중교통 이용 여부나 인근 주차 가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0105.html">서울 홈페이지 빌더 업체 찾는 이들을 위한 홍대 노래방 추천정보</a>
+        <p class="post-item__summary">성공적인 온라인 비즈니스를 위해 서울 홈페이지 빌더 업체 서비스를 알아보던 사업가 A씨는 업무를 마친 뒤 동료들과 함께 번화가를 찾았습니다. 복잡한 도심 속에서 괜찮은 장소를 찾기란 쉬운 일이 아니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0106.html">서울 홈페이지 빌더 업체 활용 사례로 보는 공덕 셔츠룸 추천정보</a>
+        <p class="post-item__summary">많은 이들이 서울 홈페이지 빌더 업체 서비스를 통해 비즈니스 기반을 다지면서도, 여가 시간의 활용에 대해서는 여전히 큰 오해를 가지고 있습니다. 흔히 셔츠룸이라는 공간이 단순히 비용이 높거나 접근하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0107.html">서울 홈페이지 빌더 업체가 제안하는 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">쾌적한 환경, 합리적인 예산, 접근성 높은 위치라는 세 가지 충족 조건이 갖춰졌을 때 유흥 활동의 만족도는 비약적으로 상승합니다. 서울 홈페이지 빌더 업체 솔루션을 통해 효율성을 중시하는 비즈니스 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0108.html">서울 홈페이지 빌더 업체 비교 분석으로 본 마곡 가라오케 추천정보</a>
+        <p class="post-item__summary">평소 이용하는 업체의 서비스에 만족하고 계신가요, 아니면 더 나은 환경을 찾아 헤매고 계신가요? 서울 홈페이지 빌더 업체 서비스를 선택할 때처럼 가라오케 또한 상세한 비교 기준을 설정하는 것이 성공</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0109.html">서울 홈페이지 빌더 업체 활용법과 마곡 유흥 추천정보 알아보기</a>
+        <p class="post-item__summary">디지털 환경에서 비즈니스 기반을 다지기 위해 서울 홈페이지 빌더 업체 선택은 중요한 첫걸음입니다. 단순히 제작 비용을 비교하는 것을 넘어, 구체적인 요구사항을 정의하는 단계가 선행되어야 합니다. 업</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0110.html">서울 홈페이지 빌더 업체 비교 분석과 합정 노래방 추천정보</a>
+        <p class="post-item__summary">서울 홈페이지 빌더 업체 시장은 기술력과 서비스 범주에 따라 크게 두 가지 선택지로 나뉩니다. 맞춤형 개발을 위주로 하는 전문 에이전시와 사용자가 직접 편집 가능한 클라우드 기반 툴로 구분됩니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0212.html">서울 홈페이지 빌더 업체 선택 시 고려할 ishikyujin 바로가기 전략</a>
+        <p class="post-item__summary">귀하의 웹사이트가 검색 결과에서 갑작스럽게 사라지는 현상을 경험한 적 있으십니까. 많은 기업이 웹사이트를 구축할 때 디자인과 기능에만 몰두하여 정작 중요한 검색 엔진 노출 안정성을 놓치곤 합니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0213.html">서울 홈페이지 빌더 업체 활용하여 합정 트렌드 서포터 및 핫플 매거진 운영하기</a>
+        <p class="post-item__summary">성공적인 웹사이트 구축을 위해 서울 홈페이지 빌더 업체 솔루션을 찾는 분들이 많아졌습니다. 단순히 페이지를 만드는 것을 넘어 특정 지역의 문화를 담아내는 플랫폼을 기획하는 것은 매우 정교한 작업입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0214.html">서울 홈페이지 빌더 업체 선택과 셔츠룸 사이트 가격 판단 기준 정리</a>
+        <p class="post-item__summary">온라인 플랫폼을 제작할 때 서울 홈페이지 빌더 업체 이용 여부는 중요한 전략적 선택지입니다. 초기 구축 비용을 절감하면서도 고품질의 결과물을 얻기 위해서는 각 업체의 가격 정책을 꼼꼼하게 비교해야 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0215.html">서울 홈페이지 빌더 업체 사용하여 구글 인덱싱 속도 초고속 광회선 대역폭 최적화하기</a>
+        <p class="post-item__summary">성공적인 웹사이트 구축을 방해하는 가장 흔한 실패 지점은 기술적 인프라에 대한 이해 부족입니다. 많은 이들이 서울 홈페이지 빌더 업체만을 맹신하다가 정작 중요한 검색 엔진 노출 최적화나 서버 속도 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
